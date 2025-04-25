@@ -1,5 +1,12 @@
 {
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "dotenv-cli": "^8.0.0",
+    "nodemon": "^3.1.10"
+  },
+  "scripts": {
+    "start": "concurrently \"dotenv -e backend/.env -- node backend/server.js\" \"npm start\"",
+    "server": "cd backend && nodemon server.js",
+    "client": "react-scripts start"
   }
 }
