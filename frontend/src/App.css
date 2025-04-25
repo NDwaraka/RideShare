@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+.homepage {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.half {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: white;
+}
+
+.user-side {
+  background-color: #4a90e2;
+}
+
+.driver-side {
+  background-color: #50e3c2;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  background-color: white;
+  color: #333;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
