@@ -6,7 +6,7 @@ const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
-const leader = express.Router();
+const user = express.Router();
 
 
-module.exports = leader;
+module.exports = user;

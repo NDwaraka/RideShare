@@ -1,0 +1,53 @@
+### Sign-in
+POST http://localhost:5000/driver/register
+Content-Type: application/json
+
+{
+  "contactInfo": "radhikardx1212@gmail.com",
+  "verificationType": "email"
+}
+
+### Driver Verification
+POST http://localhost:5000/driver/verify
+Content-Type: application/json
+
+{
+  "contactInfo": "radhikardx1212@gmail.com",
+  "verificationCode": "673747",
+  "name": "Radhika",
+  "password": "securePassword123",
+  "description": "Driver profile description",
+  "termsAccepted": true
+}
+
+### Driver - Update Vehicle Details
+POST http://localhost:5000/driver/vehicle-details
+Content-Type: application/json
+
+{
+  "contactInfo": "radhikardx1212@gmail.com",  
+  "vehicle": {
+    "seats": 4,
+    "vehicleno": "AB123CD",
+    "color": "Red",
+    "licence": "DL12345",
+    "explicence": "Valid",
+    "aadharcardno": "123456789012",
+    "rcno": "RC123456",
+    "photo": "image_url_or_base64_data"
+  }
+}
+
+### Save Driver Preferences
+POST http://localhost:5000/driver/preferences HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+    {
+    "contactInfo": "radhikardx1212@gmail.com",
+    "preferredTime": {
+        "start": "08:00",
+        "end": "17:00"
+    },
+    "location": "New York"
+    }

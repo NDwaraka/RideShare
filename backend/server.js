@@ -11,13 +11,11 @@ app.use(express.json());
 
 
 // Forward to route modules
-app.use('/leader', require('./APIs/leader.js'));
-// app.use('/admin', require('./APIs/admin.js'));
+app.use('/user', require('./APIs/user.js'));
+app.use('/driver', require('./APIs/driver.js'));
 
-
-// const { router: userVerificationRouter } = require('./APIs/userVerification.js');
-// app.use('/user', userVerificationRouter); 
-// app.use('/user',require('./APIs/userVerification.js'));  // will give err because....
+const { router: userVerificationRouter } = require('./APIs/userVerification.js');
+app.use('/driver', userVerificationRouter); 
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
