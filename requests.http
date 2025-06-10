@@ -1,0 +1,61 @@
+POST http://localhost:5000/api/users/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "password": "securepassword"
+}
+
+###
+GET http://localhost:5000/api/users
+
+###
+POST http://localhost:5000/api/users/LOGIN
+Content-Type: application/json
+
+{
+  "email": "mishamanmai@gmail.com",
+  "password": "misha"
+}
+
+
+###
+POST http://localhost:5000/api/rides
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODBjMTMyNjZjMTRiN2M0MmI3OWU1M2IiLCJlbWFpbCI6Im1pc2hhbWFubWFpQGdtYWlsLmNvbSIsImlhdCI6MTc0NTY0NjIxNSwiZXhwIjoxNzQ1NjQ5ODE1fQ.CtBwH1HyLvNX7T3rkmHfKkqS_Ic43aEU2HPMeOmtls0
+
+{
+  "startLocation": {
+    "type": "Point",
+    "coordinates": [-73.9857, 40.7484]
+  },
+  "endLocation": {
+    "type": "Point",
+    "coordinates": [-74.0060, 40.7128]
+  },
+  "startAddress": "Empire State Building",
+  "endAddress": "World Trade Center",
+  "scheduled_date": "2023-12-15",
+  "scheduled_time": "14:30"
+}
+
+###
+GET http://localhost:5000/api/rides/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODBjMTMyNjZjMTRiN2M0MmI3OWU1M2IiLCJlbWFpbCI6Im1pc2hhbWFubWFpQGdtYWlsLmNvbSIsImlhdCI6MTc0NTY0NjIxNSwiZXhwIjoxNzQ1NjQ5ODE1fQ.CtBwH1HyLvNX7T3rkmHfKkqS_Ic43aEU2HPMeOmtls0
+
+###
+POST http://localhost:5000/api/drivers/register
+Content-Type: application/json
+
+{
+  "name": "Test Driver",
+  "email": "driver@test.com",
+  "password": "password123",
+  "licenseNumber": "DL123456",
+  "vehicleInfo": "Toyota Camry 2020"
+}
+
+###
+GET http://localhost:5000/api/drivers/find-by-email?email=driver@test.com
+Content-Type: application/json

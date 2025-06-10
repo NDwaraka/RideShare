@@ -1,0 +1,473 @@
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-title {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.map-section {
+  flex: 1 1 600px;
+}
+/* Price display */
+.price-display {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.price-display h4 {
+  color: #4CAF50;
+  font-size: 1.5rem;
+  margin: 0 0 10px 0;
+}
+
+.price-info {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Enhanced booking cards */
+.booking-card {
+  position: relative;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.booking-details p {
+  margin: 5px 0;
+}
+
+/* Status indicators */
+.status-pending {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.status-confirmed {
+  color: #2196F3;
+  font-weight: bold;
+}
+
+.status-cancelled {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.status-completed {
+  color: #4CAF50;
+  font-weight: bold;
+}
+.booking-form {
+  flex: 1 1 400px;
+}
+/* Add these styles to your Dashboard.css file */
+
+/* Stops container styling */
+.stops-container {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #f8f8f8;
+}
+
+.stops-container h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Individual stop item styling */
+.stop-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 4px solid #ccc;
+  background-color: #fff;
+}
+
+.stop-item.pickup {
+  border-left-color: #4caf50;
+}
+
+.stop-item.dropoff {
+  border-left-color: #f44336;
+}
+
+.stop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.stop-label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.stop-item.pickup .stop-label {
+  color: #4caf50;
+}
+
+.stop-item.dropoff .stop-label {
+  color: #f44336;
+}
+
+/* Add stop buttons */
+.add-stops-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.add-btn {
+  flex: 1;
+  padding: 8px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.add-btn.pickup {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.add-btn.pickup:hover {
+  background-color: #c8e6c9;
+}
+
+.add-btn.dropoff {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.add-btn.dropoff:hover {
+  background-color: #ffcdd2;
+}
+
+/* Delete button */
+.delete-btn {
+  background: transparent;
+  color: #999;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  color: #d32f2f;
+}
+
+.delete-btn:disabled {
+  color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Map marker styles */
+.marker {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.marker.pickup {
+  background-color: #4caf50;
+}
+
+.marker.drop {
+  background-color: #f44336;
+}
+
+/* Booking card updates for multiple stops */
+.booking-locations h4 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.booking-locations h4:first-child {
+  margin-top: 0;
+}
+
+/* Price display enhancements */
+.price-display {
+  margin: 15px 0;
+  padding: 10px 15px;
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196f3;
+  border-radius: 4px;
+}
+
+.price-display h4 {
+  margin: 0 0 5px;
+  color: #0d47a1;
+  font-size: 18px;
+}
+
+.price-info {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+.map-instructions {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.secondary-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.bookings-section {
+  margin-top: 30px;
+}
+
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-card {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.booking-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.booking-locations {
+  flex: 3;
+}
+
+.booking-details {
+  flex: 2;
+}
+
+.status-pending {
+  color: #856404;
+  background-color: #fff3cd;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.status-confirmed {
+  color: #155724;
+  background-color: #d4edda;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.status-completed {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.status-cancelled {
+  color: #721c24;
+  background-color: #f8d7da;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.no-bookings {
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+  
+  .booking-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.message.info {
+  background-color: #e1f5fe;
+  color: #0277bd;
+}
+
+/* Add these styles to your Dashboard.css file */
+
+.input-with-button {
+  display: flex;
+  width: 100%;
+}
+
+.input-with-button .form-input {
+  flex: 1;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-with-button .input-btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.message.info {
+  background-color: #cce5ff;
+  color: #004085;
+  border: 1px solid #b8daff;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
